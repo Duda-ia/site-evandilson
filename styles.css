@@ -250,10 +250,89 @@ body {
 /* Footer */
 footer {
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-white);
     text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background-color: var(--color-white);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+    order: 2;
+}
+
+.doctor-round {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--shadow-default);
+}
+
+.about-content {
+    flex: 2;
+    order: 1;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.about-credentials {
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    color: var(--color-primary);
+}
+
+.about-text p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.about-text h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.formation-list {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.formation-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.formation-list li::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
 }
 
 /* Responsive Design */
@@ -283,11 +362,11 @@ footer {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
 
     .hero-image {
-        max-width: 400px;
-        margin: 0 auto;
+        max-width: 100%;
     }
 
     .hero-text {
@@ -301,11 +380,27 @@ footer {
     .logo-round {
         height: 40px;
     }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-image {
+        max-width: 300px;
+    }
+
+    .formation-list {
+        text-align: left;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .specialties {
@@ -313,6 +408,18 @@ footer {
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-credentials {
+        font-size: 1rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.2rem;
     }
 } 
