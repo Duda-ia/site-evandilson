@@ -13,16 +13,23 @@
     <nav class="navbar">
         <div class="navbar__logo">
             <a href="index.html" aria-label="Página inicial">
-                <img src="Elementos/Logo.png" alt="Dr. Evandilson - Logo" class="navbar__logo-img">
+                <img src="Elementos/LogoRedonda.png" alt="Dr. Evandilson - Logo" class="navbar__logo-img">
             </a>
         </div>
-        <div class="navbar__logo-center">
-            <img src="Elementos/LogoRedonda.png" alt="Dr. Evandilson - Logo redondo" class="navbar__logo-round">
+        <div class="navbar__container">
+            <ul class="navbar__links">
+                <li><a href="index.html" class="navbar__link navbar__link--active" aria-label="Página inicial">Início</a></li>
+                <li><a href="servicos.html" class="navbar__link" aria-label="Especialidades médicas">Especialidades</a></li>
+                <li><a href="#about" class="navbar__link" aria-label="Sobre Dr. Evandilson">Sobre</a></li>
+                <li><a href="#convenios" class="navbar__link" aria-label="Convênios aceitos">Convênios</a></li>
+            </ul>
+            <a href="https://www.doctoralia.com.br/evandilson-guenes/urologista/recife" 
+               target="_blank" 
+               class="navbar__cta-button" 
+               aria-label="Agendar consulta via Doctoralia">
+                Agende sua Consulta
+            </a>
         </div>
-        <ul class="navbar__links">
-            <li><a href="index.html" class="navbar__link navbar__link--active" aria-label="Página inicial">Início</a></li>
-            <li><a href="servicos.html" class="navbar__link" aria-label="Especialidades médicas">Especialidades</a></li>
-        </ul>
     </nav>
 
     <main class="container">
@@ -32,6 +39,7 @@
                     <img src="Elementos/Evandilson.jpg" alt="Dr. Evandilson Guenes - Médico Urologista" class="hero__img">
                 </div>
                 <div class="hero__text">
+                    <!-- <img src="Elementos/Logocompleta.png" alt="Dr. Evandilson - Logo Completa" class="hero__logo"> -->
                     <h1 class="hero__title">PRECISÃO ROBÓTICA, CUIDADO HUMANO</h1>
                     <div class="hero__specialties">
                         <span>UroOncologia</span>
@@ -69,7 +77,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
             <div class="about__container">
                 <div class="about__image">
                     <img src="Elementos/Evandilsobata.jpg" alt="Dr. Evandilson Guenes - Médico Urologista" class="about__img">
@@ -91,6 +99,18 @@
                             <li>Residência Médica em Urologia - Hospital das Clínicas (UFPE)</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-transicao">
+            <div class="section-transicao__container">
+                <div class="section-transicao__image">
+                    <img src="Elementos/Logoimagem.jpg" alt="Dr. Evandilson - Urologia" class="section-transicao__img">
+                </div>
+                <div class="section-transicao__content">
+                    <div class="section-transicao__divider"></div>
+                    <p class="section-transicao__text">Com precisão, tecnologia e empatia, o cuidado com o paciente é sempre a prioridade.</p>
                 </div>
             </div>
         </section>
