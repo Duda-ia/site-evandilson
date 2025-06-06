@@ -155,28 +155,39 @@
         <section id="convenios" class="convenios section">
             <div class="container">
                 <h2 class="section-title">Convênios Aceitos</h2>
-                <div class="convenios__grid">
-                    <div class="convenios__city">
-                        <h3 class="convenios__subtitle">Recife</h3>
-                        <div class="convenios__logos">
-                            <img src="Elementos/Amil.png" alt="Amil - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Unimed.svg" alt="Unimed - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Campe.png" alt="CAMPE - Convênio médico" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="convenios__city">
-                        <h3 class="convenios__subtitle">Caruaru</h3>
-                        <div class="convenios__logos">
-                            <img src="Elementos/Amil.png" alt="Amil - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Unimed.svg" alt="Unimed - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Hapvida.png" alt="Hapvida - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Logosulamerica.png" alt="SulAmérica - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Camed.png" alt="Camed Saúde - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Consaude.png" alt="Consaúde - Convênio médico" class="img-fluid">
-                            <img src="Elementos/Fisco.png" alt="Fisco Saúde - Convênio médico" class="img-fluid">
+                <div class="convenios__carousel">
+                    <div class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="Elementos/Amil.png" alt="Amil - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Unimed.svg" alt="Unimed - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Campe.png" alt="CAMPE - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Hapvida.png" alt="Hapvida - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Logosulamerica.png" alt="SulAmérica - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Camed.png" alt="Camed Saúde - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Consaude.png" alt="Consaúde - Convênio médico" class="convenios__logo">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="Elementos/Fisco.png" alt="Fisco Saúde - Convênio médico" class="convenios__logo">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <p class="convenios__disclaimer">*Consulte a secretária para agendamento. Os convênios disponíveis variam conforme a unidade.*</p>
             </div>
         </section>
     </main>
@@ -198,5 +209,30 @@
     </footer>
 
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Splide('.splide', {
+                type: 'loop',
+                perPage: 5,
+                perMove: 1,
+                gap: '2rem',
+                pagination: false,
+                arrows: true,
+                breakpoints: {
+                    1024: {
+                        perPage: 4,
+                    },
+                    768: {
+                        perPage: 3,
+                    },
+                    480: {
+                        perPage: 2,
+                    }
+                }
+            }).mount();
+        });
+    </script>
 </body>
 </html> 
