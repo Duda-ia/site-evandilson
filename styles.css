@@ -1229,4 +1229,9 @@ body {
     .footer__text {
         font-size: 0.8rem;
     }
+}
+
+.clinic-logo {
+    height: 68px;
+    object-fit: contain;
 } 
