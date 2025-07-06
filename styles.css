@@ -724,12 +724,30 @@ body {
 
     .cta-button {
         min-height: 120px;
-        padding: var(--spacing-sm);
+        padding: var(--spacing-md);
+        overflow: hidden;
+    }
+
+    .cta-button--locations .cta-button__title {
+        display: none;
+    }
+
+    .cta-button--locations {
+        flex-direction: row;
+        justify-content: center;
+        min-height: 80px;
     }
 
     .cta-button__links {
         gap: var(--spacing-sm);
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .clinic-logo {
+        height: 60px;
+        width: auto;
+        max-width: 100%;
     }
 
     .about__container {
@@ -830,6 +848,18 @@ body {
     .cta-button {
         min-height: 110px;
         padding: var(--spacing-sm);
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .cta-button--locations .cta-button__title {
+        display: none;
+    }
+
+    .cta-button--locations {
+        flex-direction: row;
+        justify-content: center;
+        min-height: 70px;
     }
 
     .cta-button__title {
@@ -843,6 +873,14 @@ body {
 
     .cta-button__links {
         gap: var(--spacing-xs);
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .clinic-logo {
+        height: 50px;
+        width: auto;
+        max-width: 100%;
     }
 
     .cta-button__link {
