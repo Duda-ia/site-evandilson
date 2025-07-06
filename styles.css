@@ -108,6 +108,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    min-height: 60px;
 }
 
 .navbar__container {
@@ -127,14 +128,15 @@ body {
     gap: var(--spacing-lg);
 }
 
-.navbar__link {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 700;
-    transition: var(--transition-default);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-}
+    .navbar__link {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 700;
+        transition: var(--transition-default);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+    }
 
 .navbar__link:hover,
 .navbar__link.active {
@@ -142,16 +144,17 @@ body {
     background-color: var(--color-accent-light);
 }
 
-.navbar__cta-button {
-    background-color: var(--color-accent-light);
-    color: var(--color-primary);
-    font-weight: 700;
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    margin-left: var(--spacing-lg);
-    transition: var(--transition-default);
-}
+    .navbar__cta-button {
+        background-color: var(--color-accent-light);
+        color: var(--color-primary);
+        font-weight: 700;
+        padding: 0.6rem 1.2rem;
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        margin-left: var(--spacing-lg);
+        transition: var(--transition-default);
+        white-space: nowrap;
+    }
 
 .navbar__cta-button:hover {
     background-color: var(--color-accent);
@@ -675,15 +678,43 @@ body {
     }
 
     .navbar__logo img {
-        height: 40px;
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
     }
 
     .navbar__container {
         gap: var(--spacing-md);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .navbar__container::-webkit-scrollbar {
+        display: none;
     }
 
     .navbar__links {
         gap: var(--spacing-md);
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        min-width: max-content;
+    }
+
+    .navbar__link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .navbar__cta-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        margin-left: var(--spacing-sm);
     }
 
     .cta-buttons__container {
@@ -831,7 +862,43 @@ body {
     }
 
     .navbar__logo img {
-        height: 35px;
+        height: 45px;
+        width: 45px;
+        object-fit: contain;
+    }
+
+    .navbar__container {
+        gap: var(--spacing-sm);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .navbar__container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar__links {
+        gap: var(--spacing-sm);
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        min-width: max-content;
+    }
+
+    .navbar__link {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .navbar__cta-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+        margin-left: var(--spacing-xs);
     }
 
     .footer__container {
@@ -965,7 +1032,7 @@ body {
 
 /* Videos Page */
 .videos {
-    padding: 80px 24px;
+    padding: 100px 24px 80px 24px;
     max-width: 1140px;
     margin: auto;
 }
@@ -1025,11 +1092,12 @@ body {
 
 @media (max-width: 768px) {
     .videos {
-        padding: 60px 20px;
+        padding: 140px 20px 60px 20px;
     }
 
     .videos h2 {
         font-size: 28px;
+        margin-top: 40px;
     }
 
     .videos p {
@@ -1044,11 +1112,12 @@ body {
 
 @media (max-width: 480px) {
     .videos {
-        padding: 40px 16px;
+        padding: 130px 16px 40px 16px;
     }
 
     .videos h2 {
         font-size: 24px;
+        margin-top: 30px;
     }
 
     .videos p {
